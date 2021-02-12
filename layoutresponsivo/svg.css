@@ -1,0 +1,248 @@
+body, body * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #191919
+}
+body {
+    background-color: #ffffff;
+}
+h1 {
+    font-family: 'Open sans', sans-serif;
+    font-size: 3em;
+    font-weight: 700;
+}
+ p {
+    font-size: 1rem;
+    font-family: 'Poppins';
+    text-align: justify left;
+ }
+ @media (max-width: 950px){
+     html {
+        font-size: 0.9em;
+    }
+ }
+
+/*menu da página*/
+
+header {
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    background-color: #ff9f1a;
+    z-index: 10;
+}
+
+nav {
+    height: 100%;
+    width: 98%;
+    /*max-width: 1800px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+}
+
+.logo {
+    display: inline;
+    height: 120%;
+    padding-left: 1rem;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+}
+.ulmenu li{
+    list-style: none;
+    display: inline;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Roboto slab', sans-serif;
+    font-weight: bold;
+    padding-right: 1em;
+}
+@media (max-width:950px){
+    nav {
+        column-gap: 0.5rem;
+    }
+    .logo {
+        align-self: auto;
+    }
+    .ulmenu {
+        justify-self: flex-end;
+        align-self: flex-end;
+        width: auto;
+    }
+    .ulmenu li {
+        font-size: 0.7rem;
+    }
+    
+}
+li:hover {
+    opacity: 80%;
+    color: papayawhip;
+}
+
+/*Landing page 1*/
+.landing-page {
+    height: 600px;
+    width: 100%;
+    background-image: url("images/Coding-on-MacBook-Laptop-Notepad_3mylX4Z1EVLa_1600.jpeg");
+    background-position: left;
+    margin: 0%;
+}
+.lp1 {
+    width: 30%;
+    margin: 0% ;
+    padding-top: 5%;
+    padding-left: 2%;
+}
+.h1 {
+    margin-top: 15%;
+}
+.landing-page p {
+    margin-top: 3em;
+    width: 100%;
+}
+@media (max-width: 700px){
+    .lp1 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 11%;
+    }
+    .h1 {
+        margin-top: 12%;
+    }
+}
+
+/*Landing page 2*/
+
+.landing-page2 {
+    background-color:#3d3d3d;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:    'img  lp2 .';
+    column-gap: 2em;
+}
+@media (max-width:700px){
+    .landing-page2{    
+        grid-template-rows: 50% 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    'lp2'
+                                'img' ;
+    }
+
+    .lp2 {
+        padding: 1em;
+    }
+    /*.img2 {
+        background-position-y: bottom;
+        background-origin: border-box;
+    }*/
+}
+
+.img2 {
+    grid-area: img;
+    background-color: #4b4b4b;
+    background-image: url("images/undraw_subscriptions_re_k7jj.svg");
+    background-repeat:no-repeat;
+    background-size: 94%;
+    background-position-x: 1rem;
+    background-position-y: center;
+}
+@media (max-width: 700px){
+    .img2 {
+        background-position-y: center;
+        background-origin: border-box;
+        padding-top: 1.5rem;
+        background-origin: content-box;
+    }
+}
+.lp2 {
+    grid-area: lp2;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    row-gap: 2em;
+    height: 100%;
+}
+.h2 {
+    color: #ffffff;
+    
+}
+
+.landing-page2 p {
+    color: #ffffff;
+    margin-bottom: 0px;
+}
+@media (max-width:700px){
+    .lp2 {
+        padding-top: 1em;
+    }
+}
+@media (min-width: 700px){
+    .h2{
+        padding-top: 30%;
+    }
+}
+
+
+/*landing page 3*/
+
+.landing-page3 {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    padding-left: 1em;
+    row-gap: 3rem;
+}
+@media (min-width: 700px){
+.lp3 {
+    width: 30vw;
+}
+.lp3 p {
+    padding-right: 2rem;
+}
+.h3 {
+    margin-top: 30%;
+    margin-bottom: 2rem;
+}
+}
+
+.img3 {
+    background-image: url("images/undraw_Nature_fun_re_iney.svg");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position-y:center;
+    width: 70%;
+}
+
+@media (max-width: 700px){
+    .landing-page3 {
+        flex-direction: column;
+        column-gap: 0px;
+        align-items:center;
+        justify-content: stretch;
+    }
+    .lp3 {
+        width: 90%;
+        margin: 2rem auto 0%;
+    }
+    .h3 {
+        margin-bottom: 0.5rem;
+    }
+    .img3 {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
