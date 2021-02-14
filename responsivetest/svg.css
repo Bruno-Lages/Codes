@@ -243,7 +243,6 @@ li:hover {
         grid-area: lp3;
         width: 90%;
         margin: 2rem auto 1rem;
-        border: teal solid;
     }
     .h3 {
         margin-bottom: 0.5rem;
@@ -252,7 +251,6 @@ li:hover {
         grid-area: img3;
         margin-bottom: 1rem;
         background-size: contain;
-        border: solid khaki;
     }
 }
 
@@ -260,3 +258,4 @@ li:hover {
     .landing-page3 {
         height: 150vh;
     }
+}
