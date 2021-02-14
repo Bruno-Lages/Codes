@@ -20,7 +20,7 @@ h1 {
  }
  @media (max-width: 950px){
      html {
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
  }
 
@@ -134,14 +134,20 @@ li:hover {
 }
 @media (max-width:700px){
     .landing-page2{    
-        grid-template-rows: 50% 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
         grid-template-areas:    'lp2'
                                 'img' ;
     }
 
+@media (max-height: 400px){
+    .landing-page2 {
+        height: 150vh;
+    }
+}
+
     .lp2 {
-        padding: 1em;
+        padding: 1rem;
     }
     /*.img2 {
         background-position-y: bottom;
@@ -157,6 +163,7 @@ li:hover {
     background-size: 94%;
     background-position-x: 1rem;
     background-position-y: center;
+    background-size: contain;
 }
 @media (max-width: 700px){
     .img2 {
@@ -185,7 +192,7 @@ li:hover {
 }
 @media (max-width:700px){
     .lp2 {
-        padding-top: 1em;
+        padding-top: 1rem;
     }
 }
 @media (min-width: 700px){
@@ -228,21 +235,28 @@ li:hover {
 
 @media (max-width: 700px){
     .landing-page3 {
-        flex-direction: column;
-        column-gap: 0px;
-        align-items:center;
-        justify-content: stretch;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'lp3' 'img3';
     }
     .lp3 {
+        grid-area: lp3;
         width: 90%;
-        margin: 2rem auto 0%;
+        margin: 2rem auto 1rem;
+        border: teal solid;
     }
     .h3 {
         margin-bottom: 0.5rem;
     }
     .img3 {
-        height: 100%;
-        width: 100%;
-        margin-bottom: 1em;
+        grid-area: img3;
+        margin-bottom: 1rem;
+        background-size: contain;
+        border: solid khaki;
     }
 }
+
+@media (max-height: 400px){
+    .landing-page3 {
+        height: 150vh;
+    }
