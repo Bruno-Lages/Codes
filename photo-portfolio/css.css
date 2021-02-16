@@ -1,0 +1,44 @@
+body, body * {
+    box-sizing:border-box;
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+}
+/*page menu*/
+.header {
+    width: 100%;        /*the menu occupies 10% of the screen*/
+    height: 10vh;
+}
+nav {          /*the nav is divided into the logo and the ul and occupies the whole menu box*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.logo {
+    width: auto;                             /*the logo has the height of the menu*/
+    height: 100%;
+}
+.links {
+    width: auto;            /*the ul box occupies the li space only*/
+    height: auto;
+}
+li {
+    display: inline;
+    list-style: none;
+    font-size: 1.5rem;          /*theres a space of 1em between each link*/
+    margin-right: 1em;
+}
+
+/*Photos*/
+.photos {
+    border: solid rebeccapurple;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+}
+.photos img {
+    width:min-content;
+}
