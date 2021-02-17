@@ -2,7 +2,7 @@
 some web responsive layouts
 
 <h3 align="center"> 
-	🚧  On-progress 🚀 🚧
+	🚧  In-progress 🚀 🚧
 </h3>
 
  <p align="center">
