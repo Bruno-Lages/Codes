@@ -34,18 +34,22 @@ li {
     font-size: 1.5rem;          /*theres a space of 1em between each link*/
     margin-right: 1em;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*Photos*/
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
 .photos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     grid-template-rows: repeat(auto-fit, minmax(200px,1fr));
-    gap: 1px;
+    gap: 5px;
+    margin: 1px;
+    background-color: #000;
 }
-.photos div {
-    border: blue solid;
-}
+
 .photos img {
     width: 100%;
     height: 100%;
@@ -55,41 +59,127 @@ li {
 .grid1 {
     grid-column: 1/2;
     grid-row: 1/3;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
+#img1:hover {
+    object-fit: contain;
+}
+.grid1:hover {
+    border-color: brown;
+    transform: scale(1.3) translate(10%);
+    margin-left: 1px;
+    background-color: #000;
+}
+
 .grid2 {
     grid-column: 2/3;
     grid-row: 1/2;
+    transition-duration: 0.3s;
 }
+#img2:hover {
+    object-fit: contain;
+}
+.grid2:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 .grid3 {
     grid-column: 3/5;
     grid-row: 1/2;
 }
+#img3:hover {
+    object-fit: contain;
+}
+.grid3:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 .grid4 {
     grid-column: 5/6;
     grid-row: 1/2;
+    transition-duration: 0.3s;
 }
+#img4:hover {
+    object-fit: contain;
+}
+.grid4:hover {
+    transform: scale(1.5) translatex(-15%);
+    background-color: #000;
+}
+
 .grid5 {
     grid-column: 2/3;
     grid-row: 2/3;
 }
+#img5:hover {
+    object-fit: contain;
+}
+.grid5:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 .grid6 {
     grid-column: 3/4;
     grid-row: 2/4;
 }
+#img6:hover {
+    object-fit: contain;
+}
+.grid6:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 .grid7 {
     grid-column: 4/5;
     grid-row: 2/3;
 }
+#img7:hover {
+    object-fit: contain;
+}
+.grid7:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 .grid8 {
     grid-column: 5/6;
     grid-row: 2/4;
 }
+#img8:hover {
+    object-fit: contain;
+}
+.grid8:hover {
+    transform: scale(1.3) translatex(-10%) translateY(-2%);
+    background-color: #000;
+}
+
 .grid9 {
     grid-column: 1/3;
     grid-row: 3/4;
 }
+#img9:hover {
+    object-fit: contain;
+}
+.grid9:hover {
+    transform: scale(1.3) translatex(7%) translateY(-10%);
+    background-color: #000;
+}
+
 .grid10 {
     grid-column: 4/5;
     grid-row: 3/4;
 }
+#img10:hover {
+    object-fit: contain;
+}
+.grid10:hover {
+    transform: scale(1.3);
+    background-color: #000;
+}
+
 }
