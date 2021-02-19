@@ -39,7 +39,10 @@ li {
 
 /*Photos*/
 h1 {
+    text-align: center;
+    margin: 1rem;
     font-family: 'Open Sans', sans-serif;
+    font-size: 2.4rem;
 }
 .photos {
     display: grid;
@@ -182,4 +185,22 @@ h1 {
     background-color: #000;
 }
 
+}
+
+.aboutUsPage {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.tabs {
+    margin: 1rem auto 0px;
+    width: 35%;
 }
