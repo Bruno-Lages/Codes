@@ -245,6 +245,78 @@ li {
 }
 }
 
+.grayBackground {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(60, 1%, 21%, 0.9);
+    position: fixed;
+    top: 0%;
+}
+
+.photoPlayer {
+    display: block;
+    position: fixed;
+    top: 10%;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 15px;
+    background-color: rgb(24, 22, 22);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    z-index: 10;
+}
+
+.closeButton {
+    background-image: url("images/iconfinder_cross_4115230.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 40px;
+    height: 8%;
+    margin: 1% 1% 0% auto;
+    z-index: 20;
+}
+
+.nextButton {
+    position: absolute;
+    right: 0%;
+    width: 50px;
+    height: 80%;
+    margin: 0% 0px auto auto;
+    background-image: url("images/iconfinder_right_1167974.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 30;
+    cursor: pointer;
+    opacity: 0.3;
+}
+.nextButton:hover{
+    color: #2F3435;
+    opacity: 1.0;
+}
+
+.previousButton {
+    position: absolute;
+    left: 0%;
+    width: 50px;
+    height: 80%;
+    margin: 0% auto auto 0%;
+    background-image: url("images/iconfinder_right_1167974.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 30;
+    cursor: pointer;
+    transform: rotate(180deg);
+    opacity: 0.3;
+}
+
+.previousButton:hover {
+    opacity: 1.0;
+}
+
 /*about us page*/
 .aboutUsPage {
     margin-top: 1rem;
