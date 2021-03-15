@@ -24,9 +24,9 @@ This repository contains some fictional websites aim the practice of the respons
 
 
 - [ ] Several templates for websites
-- [ ] Hamburguer menus
-- [ ] transitions 
-- [ ] Web responsive design
+- [x] Hamburguer menus
+- [x] transitions 
+- [x] Web responsive design
 
 <a name="technologies"></a>
 ## 🛠 Tecnologies
