@@ -17,15 +17,21 @@ h1 {
 }
 p {
     font-size: 1.2rem;
+    line-height: 1.8rem;
     text-align: center;
     padding: 2px;
+    font-family:'Source Sans Pro', sans-serif;
+}
+.link {
+    color:rgb(7, 82, 245);
+    font-weight: bold;           /***special settings for links*****/
 }
 
 
 
-/*page menu*/
+/********************************************page menu*******************************/
 .header {
-    width: 100%;        /*the menu occupies 10% of the screen*/
+    width: 100%;        /*the menu occupies 10% of the screen height*/
     height: 10vh;
     background-color: black;
 }
@@ -53,9 +59,54 @@ li {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
 }
+.hamburguer{
+    width: 38px;
+    height: 40px;              /****the hamburguer icon is hided in big screens***/
+    margin-right: 20px;
+    display: none;
+}
+.hamburguer div{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;         /*******settings to the hamburguer icon visual*****/
+    margin: 5px 2px;
+    border-radius: 6px;
+    transition-duration: 200ms;
+}
+@media screen and (max-width: 460px){    /*in devices with small screens, the ul disappears and the*/
+    .links {                             /*hamburguer icon shows up*/
+        display: none; 
+    }
+    .linksOn{  /*what happens when the menu appear*/
+        position: absolute;
+        top: 9vh;
+        width: 100vw;
+        height: 30vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items: center;
+    }
+    .hamburguer{
+        display: block;
+    }
+    /**settings to turn the hamburguer icon in an "X" icon**/
+    .line1X{
+        transform: rotate(45deg) translate(8px, 4px);
+        transition-duration: 300ms;
+    }
+    .line2X{
+        display: none;
+        transition-duration: 300ms;
+    }
+    .line3X{
+        transform: rotate(-45deg) translate(2px, 1px);
+        transition-duration: 300ms;
+    }
+}
 
-
-/*Photos*/
+/**********************************************Photos player**************************************/
 .photos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
@@ -70,9 +121,9 @@ li {
     height: 100%;              /*photos settings to fit into the grid-itens*/
     object-fit: cover;
 }
-@media screen and (min-width: 770px){     /*when the screen is not mobile, the images zoom 100%*/
-.grid1 {                                  /*and obtain a black background*/
-    grid-column: 1/2;
+@media screen and (min-width: 770px){     /*when the screen is not mobile, */
+.grid1 {                           /*the images adjust the size to cover the contain*/
+    grid-column: 1/2;                 /*and obtain a black background*/
     grid-row: 1/3;                                            
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
@@ -81,8 +132,7 @@ li {
     object-fit: contain;
 }
 .grid1:hover {
-    border-color: brown;
-    transform: scale(1.3) translate(10%);
+    transform: scale(1.1);
     margin-left: 1px;
     background-color: #000;
 }
@@ -91,24 +141,27 @@ li {
     grid-column: 2/3;
     grid-row: 1/2;
     transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img2:hover {
     object-fit: contain;
 }
 .grid2:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid3 {
     grid-column: 3/5;
     grid-row: 1/2;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img3:hover {
     object-fit: contain;
 }
 .grid3:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
@@ -116,84 +169,97 @@ li {
     grid-column: 5/6;
     grid-row: 1/2;
     transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img4:hover {
     object-fit: contain;
 }
 .grid4:hover {
-    transform: scale(1.5) translatex(-15%);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid5 {
     grid-column: 2/3;
     grid-row: 2/3;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img5:hover {
     object-fit: contain;
 }
 .grid5:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid6 {
     grid-column: 3/4;
     grid-row: 2/4;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img6:hover {
     object-fit: contain;
 }
 .grid6:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid7 {
     grid-column: 4/5;
     grid-row: 2/3;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img7:hover {
     object-fit: contain;
 }
 .grid7:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid8 {
     grid-column: 5/6;
     grid-row: 2/4;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img8:hover {
     object-fit: contain;
 }
 .grid8:hover {
-    transform: scale(1.3) translatex(-10%) translateY(-2%);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid9 {
     grid-column: 1/3;
     grid-row: 3/4;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img9:hover {
     object-fit: contain;
 }
 .grid9:hover {
-    transform: scale(1.3) translatex(7%) translateY(-10%);
+    transform: scale(1.1);
     background-color: #000;
 }
 
 .grid10 {
     grid-column: 4/5;
     grid-row: 3/4;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
 }
 #img10:hover {
     object-fit: contain;
 }
 .grid10:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     background-color: #000;
 }
 
@@ -245,7 +311,7 @@ li {
 }
 }
 
-.grayBackground {
+.grayBackground {  /******when the player is created, the background turns gray and opaque*/
     width: 100vw;
     height: 100vh;
     background-color: hsla(60, 1%, 21%, 0.9);
@@ -253,7 +319,7 @@ li {
     top: 0%;
 }
 
-.photoPlayer {
+.photoPlayer {           /****settings to the photo player layout*/
     display: block;
     position: fixed;
     top: 10%;
@@ -272,13 +338,13 @@ li {
     background-image: url("images/iconfinder_cross_4115230.svg");
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 40px;
+    width: 40px;                        /****close button******/
     height: 8%;
     margin: 1% 1% 0% auto;
     z-index: 20;
 }
 
-.nextButton {
+.nextButton {           /********next image button***/
     position: absolute;
     right: 0%;
     width: 50px;
@@ -297,7 +363,7 @@ li {
     opacity: 1.0;
 }
 
-.previousButton {
+.previousButton {    /*******previous image button*****/
     position: absolute;
     left: 0%;
     width: 50px;
@@ -317,9 +383,10 @@ li {
     opacity: 1.0;
 }
 
-/*about us page*/
+/****************************************about us page*****************************************/
 .aboutUsPage {
     margin-top: 1rem;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -330,8 +397,16 @@ li {
     margin: 1rem auto 0px;
     width: 35%;
 }
+@media screen and (max-width: 620px){
+    .tabs{
+        width: 60%;
+    }
+    p{
+        padding: 0px 2rem;
+    }
+}
 
-/*home page*/
+/***************************************home page**********************************************/
 .flower {
     height: 100vh;
     width: 100%;
@@ -387,7 +462,7 @@ li {
 }
 .accessContainer {
     width: 50%;
-    height: 25%;
+    height: 10rem;
     border: solid black thick;
     border-radius: 10px;
 }
@@ -408,4 +483,22 @@ li {
     color: #dff9fb;
     font-family:'Source Sans Pro', sans-serif;
     font-size: 1.6rem;
+    line-height: 2.6rem;
 }
+@media screen and (max-width: 800px){
+    .flower{
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .homeHeading{
+        width: 70%;
+        margin-top: 1rem;
+    }
+    .accessContainer{
+        width: 80%;
+    }
+    .button{
+        width: 70%;
+    }
+}
+

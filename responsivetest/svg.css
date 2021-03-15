@@ -28,6 +28,7 @@ h1 {
 
 header {
     position: fixed;
+    top: 0px;
     height: 10%;
     width: 100%;
     background-color: #ff9f1a;
@@ -36,17 +37,28 @@ header {
 
 nav {
     height: 100%;
-    width: 98%;
+    width: 99%;
     /*max-width: 1800px;*/
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin-right: auto;
 }
 
+.hamburguer {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    cursor:all-scroll;
+}
+.hamburguerLine {
+    background-color: #000;
+    border-radius: 5px;
+    width: 40px;
+    height: 7px;
+    margin: 7px 0px;
+}
 .logo {
-    display: inline;
     height: 120%;
     padding-left: 1rem;
 }
@@ -55,8 +67,9 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40%;
+    width: 50%;
     height: 100%;
+    margin-left: auto;
 }
 .ulmenu li{
     list-style: none;
@@ -67,22 +80,56 @@ ul {
     font-weight: bold;
     padding-right: 1em;
 }
-@media (max-width:950px){
-    nav {
-        column-gap: 0.5rem;
-    }
+@media screen and (max-width: 710px){
     .logo {
         align-self: auto;
+        width: 20vw;
     }
     .ulmenu {
-        justify-self: flex-end;
-        align-self: flex-end;
-        width: auto;
-    }
-    .ulmenu li {
-        font-size: 0.7rem;
+        width: 75%;
     }
     
+}
+
+@media screen and (max-width: 500px){
+    header {
+        height: 50vh;
+    }
+
+    header.menu {
+        clip-path: inset(0px 0px 80% 0px);
+        -webkit-clip-path: inset(0px 0px 80% 0px);
+    }
+
+    nav {
+        display: grid;
+        grid-template-rows: 20% 80%;
+        grid-template-columns: 40% 30% 30%;
+    }
+    ul {
+        /*display: none;*/
+        flex-direction: column;
+        justify-content:space-between;
+        margin: 1rem auto;
+        padding: 2rem 0px;
+        grid-row: span 1 / -1 ;
+        grid-column: span 3 / -1;
+    }
+    .hamburguer {
+        display: block;
+        grid-row: 0 / span 1 ;
+        grid-column: span 1 / -1;
+        margin-left: auto;
+        margin-right: 1rem;
+}
+    .logo {
+        height: 100%;
+        grid-row: 0 /  1 ;
+        grid-column: 0 / 1;
+        width: 80%;
+        
+    }
+
 }
 li:hover {
     opacity: 80%;
@@ -95,7 +142,6 @@ li:hover {
     width: 100%;
     background-image: url("images/Coding-on-MacBook-Laptop-Notepad_3mylX4Z1EVLa_1600.jpeg");
     background-position: left;
-    margin: 0%;
 }
 .lp1 {
     width: 30%;
